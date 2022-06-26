@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {PostService} from '../shared/post.service';
-import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
@@ -16,7 +15,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.postService.getPost().subscribe((res: any) => {
-      console.log(res);
       this.posts = res;
     })
   }

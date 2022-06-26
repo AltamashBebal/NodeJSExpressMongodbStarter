@@ -31,9 +31,7 @@ export class UpdateComponent implements OnInit {
   }
 
   updatePost(form: NgForm) {
-    console.log(form.value);
     this.postService.updatePost(form.value.title, form.value.description,this.id).subscribe((res: any) => {
-      console.log(res);
     })
     this.router.navigateByUrl('home');
   }

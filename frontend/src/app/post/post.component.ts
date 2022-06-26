@@ -16,9 +16,7 @@ export class PostComponent implements OnInit {
   }
 
   createNewPost(form: NgForm) {
-    console.log(form.value);
     this.postService.createPost(form.value.title, form.value.description).subscribe((res: any) => {
-      console.log(res);
     })
     this.router.navigateByUrl('home');
   }
